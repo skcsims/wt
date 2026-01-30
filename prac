@@ -1,0 +1,2807 @@
+PRACTICAL No: 01
+
+Aim: To Install Node.js on the system and verify its successful installation using the Command Prompt/Terminal.
+Steps
+1. Open a web browser and go to the official Node.js website:
+https://nodejs.org/en/download & on the homepage, download the LTS (Long-Term Support) version of Node.js suitable for your operating system.
+2. Once the installer is downloaded, double-click on it to start the installation & Follow the installation wizard:
+
+
+
+
+
+
+
+
+
+
+
+ 
+1.	Click Next
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. Accept the Terms of license and do Next
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+3. Select the destination folder
+
+
+
+
+
+
+
+
+
+
+
+
+
+4. Select the custom setup and do Next
+
+
+
+
+
+
+
+
+
+
+
+
+5. Now ready to download the Node.js
+
+
+
+6. Wait until the installation is completed, then click Finish.
+
+
+Prompt / Terminal to verify installation & Type the following commands to check the version :
+
+•	node -v → Displays Node.js version
+•	npm -v → Displays npm (Node Package Manager) version
+ 
+
+
+
+
+
+
+
+
+
+ 
+Aim: To execute basic Node.js console programs for arithmetic.
+a) Addition of two numbers 
+
+console.log("Name: Shreyash Utekar 126");
+let a = 10;
+let b = 20;
+let sum = a + b;
+console.log("Addition =", sum);
+
+Output :
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+b) Simple Calculator 
+
+console.log("Name: Shreyash Utekar 126");
+let a = 20;
+let b = 5;
+let choice = 3; // 1:Add 2:Sub 3:Mul 4:Div
+
+switch (choice) {
+  case 1:
+    console.log("Addition =", a + b);
+    break;
+  case 2:
+    console.log("Subtraction =", a - b);
+    break;
+  case 3:
+    console.log("Multiplication =", a * b);
+    break;
+  case 4:
+    console.log("Division =", a / b);
+    break;
+  default:
+    console.log("Invalid choice");
+}
+
+Output :
+ 
+PRACTICAL No: 02
+Aim: To implement iterative logic using Node.js loops.
+a) implementation using do…while loop
+let i = 1;
+do {
+  console.log("Number:", i);
+  i++;
+} while (i <= 5);
+
+Output :
+ 
+
+b) implementation using for loop
+for (let i = 1; i <= 5; i++) {
+  console.log("Number:", i);
+}
+
+Output :
+
+
+
+
+
+
+
+
+
+
+
+ 
+PRACTICAL No: 03
+Aim: To demonstrate mathematical table generation and conditional logic.
+a) Generating table of 2
+console.log("Name: Shreyash Utekar 126");
+let num = 2;
+
+for (let i = 1; i <= 10; i++) {
+  console.log(`${num} x ${i} = ${num * i}`);
+}
+
+Output :
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+b) Generating table of 3
+console.log("Name: Shreyash Utekar 126");
+let num = 3;
+
+for (let i = 1; i <= 10; i++) {
+  console.log(`${num} x ${i} = ${num * i}`);
+}
+
+Output :
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+c) Greatest of three numbers using if…else if
+console.log("Name: Shreyash Utekar 126");
+let a = 15;
+let b = 25;
+let c = 10;
+
+if (a > b && a > c) {
+  console.log("Greatest number is:", a);
+} else if (b > a && b > c) {
+  console.log("Greatest number is:", b);
+} else {
+  console.log("Greatest number is:", c);
+}
+
+Output :
+  
+
+
+
+
+
+
+
+
+
+PRACTICAL No: 04
+Aim: To demonstrate nested loop structures for pattern printing.
+Create an application in NodeJS to print * patterns
+starpattern.js
+console.log("Name: Shreyash Utekar 126");
+
+var n = 5;
+var pattern = "";
+
+for (var i = 1; i <= n; i++) {
+  for (var j = 1; j <= i; j++) {
+    pattern += "* ";
+  }
+  pattern += "\n";
+}
+
+console.log(pattern);
+
+Output :
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PRACTICAL No: 05
+
+AIM: To implement number property checks and ranges.
+
+a)Write a program to find if the number is odd or even
+odd_even.js
+console.log("Name: Shreyash Utekar 126");
+
+function checkOddOrEven(num) {
+  if (num % 2 === 0) {
+    console.log(num + " is an Even Number");
+  } else {
+    console.log(num + " is an Odd Number");
+  }
+}
+const number = 27;
+checkOddOrEven(number);
+
+Output :
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+ 
+b) Write a program to print the Prime Numbers from 1 to 50
+prime.js
+console.log("Name: Shreyash Utekar 126");
+
+function isPrime(num) {
+  if (num <= 1) return false;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+for (let i = 1; i <= 50; i++) {
+  if (isPrime(i)) {
+    console.log(i);
+  }
+}
+Output :
+ 
+
+
+
+PRACTICAL No: 06
+Aim: To study digit manipulation and mathematical constants.
+a) Write a program to index the reverse of a four-digit number 
+reverse.js
+console.log("Name: Shreyash Utekar 126");
+
+function reverseNumber(num) {
+  if (num < 1000 || num > 9999) {
+    console.log("Please enter a valid four-digit number");
+    return;
+  }
+  const reverseNum = num.toString().split('').reverse().join('');
+  return parseInt(reverseNum);
+}
+
+const number = 7856;
+const reversed = reverseNumber(number);
+
+console.log("Original :", number);
+console.log("Reversed :", reversed);
+
+Output :
+ 
+
+
+
+
+
+
+
+
+
+
+
+	
+
+b) Write a program to check if the entered number is Armstrong or not
+armstrong.js
+console.log("Name: Shreyash Utekar 126");
+
+function isArmstrong(num) {
+  const numStr = num.toString();
+  const numDigits = numStr.length;
+  let sum = 0;
+  let temp = num;
+
+  while (temp > 0) {
+    const digit = temp % 10;
+    sum += Math.pow(digit, numDigits);
+    temp = Math.floor(temp / 10);
+  }
+
+  if (sum === num) {
+    console.log(num + " is an Armstrong number!");
+  } else {
+    console.log(num + " is not an Armstrong number.");
+  }
+}
+
+const number = 153;
+isArmstrong(number);
+
+Output :
+ 
+
+	
+ 
+PRACTICAL No: 07
+AIM: To implement series generation and unit conversion.
+
+a)Write a program to print the Fibonacci series
+fibonacci.js
+console.log("Name: Shreyash Utekar 126");
+
+const prompt = require('prompt-sync')();
+
+function printFibonacci(n) {
+  let a = 0, b = 1, next;
+  console.log("Fibonacci Series up to " + n + " terms:");
+  for (let i = 1; i <= n; i++) {
+    console.log(a);
+    next = a + b;
+    a = b;
+    b = next;
+  }
+}
+const numTerms = parseInt(prompt("Enter the number of terms for Fibonacci series: "));
+printFibonacci(numTerms);
+
+Output :
+ 
+
+
+b) Write a program to convert the temperature entered by the user
+temperature.js
+console.log("Name: Shreyash Utekar 126");
+
+const prompt = require('prompt-sync')();
+
+function celsiusToFahrenheit(celsius) {
+  return (celsius * 9 / 5) + 32;
+}
+
+function fahrenheitToCelsius(fahrenheit) {
+  return (fahrenheit - 32) * 5 / 9;
+}
+
+console.log("Choose the conversion type:");
+console.log("1. Celsius to Fahrenheit");
+console.log("2. Fahrenheit to Celsius");
+
+const choice = prompt("Enter 1 or 2 to choose conversion: ");
+
+if (choice === "1") {
+  const celsius = parseFloat(prompt("Enter temperature in Celsius: "));
+  const fahrenheit = celsiusToFahrenheit(celsius);
+  console.log(`${celsius}°C is equal to ${fahrenheit.toFixed(2)}°F`);
+} else if (choice === "2") {
+  const fahrenheit = parseFloat(prompt("Enter temperature in Fahrenheit: "));
+  const celsius = fahrenheitToCelsius(fahrenheit);
+  console.log(`${fahrenheit}°F is equal to ${celsius.toFixed(2)}°C`);
+} else {
+  console.log("Invalid choice. Please enter 1 or 2.");
+}
+
+
+
+ 
+Output :
+
+ 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+PRACTICAL No: 08
+Aim: To demonstrate the use of Anonymous Functions in Node.js.
+a)Write a program to demonstrate the factorial of a number using Anonymous Functions
+factorial.js
+console.log("Name: Shreyash Utekar 126");
+
+const prompt = require("prompt-sync")();
+
+let number = parseInt(prompt("Enter a non-negative integer: "));
+
+if (isNaN(number) || number < 0) {
+  console.log("Please enter a valid non-negative integer.");
+} else {
+  // Anonymous function to calculate factorial
+  const factorial = function(n) {
+    let fact = 1;
+    for (let i = 1; i <= n; i++) {
+      fact = fact * i;
+    }
+    return fact;
+  };
+
+  console.log("The factorial of " + number + " is: " + factorial(number));
+}
+
+Output :
+ 
+
+
+
+
+
+	
+b)Write a program to demonstrate the Pattern using Anonymous Functions
+pattern.js
+console.log("Name: Shreyash Utekar 126");
+
+// Anonymous function using arrow syntax
+const generatePattern = (rows) => {
+  const patternLine = (i) =>
+    Array.from({ length: i }, (_, idx) => idx + 1).join(" ");
+
+  for (let i = 1; i <= rows; i++) {
+    console.log(patternLine(i));
+  }
+};
+
+const rows = 5;
+generatePattern(rows);
+
+Output :
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+Practical No:-09
+Aim: To study asynchronous behavior and Callback functions.
+a)Write a program to demonstrate the arithmetic operations using Callback Functions
+callback_arithmetic.js
+console.log("Name: Shreyash Utekar 126");
+
+function add(a, b, callback) {
+  const result = a + b;
+  callback(null, result);
+}
+
+function subtract(a, b, callback) {
+  const result = a - b;
+  callback(null, result);
+}
+
+function multiply(a, b, callback) {
+  const result = a * b;
+  callback(null, result);
+}
+
+function divide(a, b, callback) {
+  if (b === 0) {
+    callback("Error: Division by zero is not allowed", null);
+  } else {
+    const result = a / b;
+    callback(null, result);
+  }
+}
+
+function main() {
+  const a = 10, b = 5;
+  console.log("Performing Arithmetic Operations Using Callbacks:");
+
+  add(a, b, (err, result) => {
+    if (err) {
+      console.error(err);
+    } else {
+      console.log(`Addition: ${a} + ${b} = ${result}`);
+    }
+  });
+
+  subtract(a, b, (err, result) => {
+    if (err) {
+      console.error(err);
+    } else {
+      console.log(`Subtraction: ${a} - ${b} = ${result}`);
+    }
+  });
+
+  multiply(a, b, (err, result) => {
+    if (err) {
+      console.error(err);
+    } else {
+      console.log(`Multiplication: ${a} * ${b} = ${result}`);
+    }
+  });
+
+  divide(a, b, (err, result) => {
+    if (err) {
+      console.error(err);
+    } else {
+      console.log(`Division: ${a} / ${b} = ${result}`);
+    }
+  });
+}
+main();
+Output :
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+b) Write a program to demonstrate the setTimeout function
+delay.js
+console.log("Name: Shreyash Utekar 126");
+
+const delayedTask = () => {
+  console.log("This message is displayed after a 3-second delay.");
+};
+
+console.log("Program started. Waiting for 3 seconds...");
+console.log("You will see this message immediately after the program starts.");
+
+// Call the function after 3 seconds (3000 milliseconds)
+setTimeout(delayedTask, 3000);
+
+Output :
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+Practical No:-10
+AIM: To implement modularity in Node.js using require and exports.
+a) Using modules, perform the Arithmetic Operations
+Arithmetic.js
+console.log("Name: Shreyash Utekar 126");
+
+function add(a, b) {
+  return a + b;
+}
+
+function subtract(a, b) {
+  return a - b;
+}
+
+function multiply(a, b) {
+  return a * b;
+}
+
+function divide(a, b) {
+  if (b === 0) {
+    return "Error: Division by zero";
+  }
+  return a / b;
+}
+
+// Export functions
+module.exports = {
+  add,
+  subtract,
+  multiply,
+  divide
+};
+
+Index.js
+const arithmetic = require('./Arithmetic');
+
+const num1 = 10;
+const num2 = 5;
+
+console.log(`Addition of ${num1} and ${num2}: ${arithmetic.add(num1, num2)}`);
+console.log(`Subtraction of ${num1} and ${num2}: ${arithmetic.subtract(num1, num2)}`);
+console.log(`Multiplication of ${num1} and ${num2}: ${arithmetic.multiply(num1, num2)}`);
+console.log(`Division of ${num1} by ${num2}: ${arithmetic.divide(num1, num2)}`);
+
+Output :
+ 
+
+b) Using modules, index the Area of a Circle, Rectangle, Square
+area.js
+console.log("Name: Shreyash Utekar 126");
+
+function circle(radius) {
+  if (radius < 0) return "Invalid radius";
+  return Math.PI * radius * radius;
+}
+
+function rectangle(length, width) {
+  if (length < 0 || width < 0) return "Invalid dimensions";  return length * width;
+}
+function square(side) {
+  if (side < 0) return "Invalid side length";
+  return side * side;
+}
+
+module.exports = {
+  circle,
+  rectangle,
+  square
+};
+
+Index1.js
+const area = require('./area');
+
+const radius = 5;
+const length = 10;
+const width = 6;
+const side = 4;
+
+console.log(`Area of Circle with radius ${radius}:`, area.circle(radius));
+console.log(
+  `Area of Rectangle with length ${length} and width ${width}:`,
+  area.rectangle(length, width)
+);
+console.log(`Area of Square with side ${side}:`, area.square(side));
+
+Output :
+ 
+ 
+Practical No:-11
+Aim: To implement user input processing and complex grading logic.
+a) Write a program to take the marks of four subjects from user and check if the student has passed the examination or not, calculate percentage and grade
+result.js
+console.log("Name: Shreyash Utekar 126");
+
+const prompt = require('prompt-sync')();
+
+const subject1 = parseFloat(prompt("Enter marks for subject 1: "));
+const subject2 = parseFloat(prompt("Enter marks for subject 2: "));
+const subject3 = parseFloat(prompt("Enter marks for subject 3: "));
+const subject4 = parseFloat(prompt("Enter marks for subject 4: "));
+
+let passStatus;
+
+// Pass / Fail condition
+if (subject1 >= 40 && subject2 >= 40 && subject3 >= 40 && subject4 >= 40) {
+  passStatus = "Passed";
+} else {
+  passStatus = "Failed";
+}
+
+const totalMarks = subject1 + subject2 + subject3 + subject4;
+const percentage = (totalMarks / 400) * 100;
+
+// Grade calculation
+function calculateGrade(percentage) {
+  if (percentage >= 90) {
+    return "A+";
+  } else if (percentage >= 80) {
+    return "A";
+  } else if (percentage >= 70) {
+    return "B+";
+  } else if (percentage >= 60) {
+    return "B";
+  } else if (percentage >= 50) {
+    return "C+";
+  } else if (percentage >= 40) {
+    return "C";
+  } else {
+    return "F";
+  }
+}
+
+const grade = calculateGrade(percentage);
+
+console.log(`Total Marks: ${totalMarks}/400`);
+console.log(`Percentage: ${percentage.toFixed(2)}%`);
+console.log(`Status: ${passStatus}`);
+console.log(`Grade: ${grade}`);
+
+Output :
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+Practical No:-12
+Aim: To manage event listeners within the EventEmitter class.
+a) Write an application to demonstrate function (removeListner, listnerCount).
+p9_listner.js
+console.log("Name: Shreyash Utekar 126");
+
+const events = require("events");
+const eventEmitter = new events.EventEmitter();
+
+function listener1() {
+  console.log("Event received by Listener 1");
+}
+
+function listener2() {
+  console.log("Event received by Listener 2");
+}
+
+// Adding listeners
+eventEmitter.addListener("write", listener1);
+eventEmitter.on("write", listener2);
+
+// Emitting event
+eventEmitter.emit("write");
+
+// Listener count
+console.log("Listener count:", eventEmitter.listenerCount("write"));
+
+// Removing listener1
+eventEmitter.removeListener("write", listener1);
+console.log("Listener 1 is removed");
+
+// Emitting event again
+eventEmitter.emit("write");
+
+// Listener count after removal
+console.log("Listener count:", eventEmitter.listenerCount("write"));
+
+console.log("Program Ended . . . .");
+
+Output :
+ 
+Practical No:-13
+Aim: To implement advanced EventEmitter patterns.
+a) Create an application in nodejs to create Return Event Emitter.
+p10_listner.js
+console.log("Name: Shreyash Utekar 126");
+
+const EventEmitter = require('events').EventEmitter;
+
+function LoopProcessor(num) {
+  const e = new EventEmitter();
+
+  setTimeout(function () {
+    for (let i = 1; i <= num; i++) {
+      e.emit('BeforeProcess', i);
+      console.log('Processing number: ' + i);
+      e.emit('AfterProcess', i);
+    }
+  }, 2000);
+
+  return e;
+}
+
+const lp = LoopProcessor(3);
+
+lp.on('BeforeProcess', function (data) {
+  console.log('About to start the process for ' + data);
+});
+
+lp.on('AfterProcess', function (data) {
+  console.log('Completed processing ' + data);
+});
+
+Output :
+ 
+
+
+b) Create an application in node.js to create Extent Event Emitter.
+p11_listner.js
+console.log("Name: Shreyash Utekar 126");
+
+const EventEmitter = require('events').EventEmitter;
+const util = require('util');
+
+function LoopProcessor(num) {
+  const me = this;
+
+  setTimeout(function () {
+    for (let i = 1; i <= num; i++) {
+      me.emit('BeforeProcess', i);
+      console.log('Processing number: ' + i);
+      me.emit('AfterProcess', i);
+    }
+  }, 2000);
+
+  return this;
+}
+
+// Inherit EventEmitter
+util.inherits(LoopProcessor, EventEmitter);
+
+const lp = new LoopProcessor(3);
+
+lp.on('BeforeProcess', function (data) {
+  console.log('About to start the process for ' + data);
+});
+
+lp.on('AfterProcess', function (data) {
+  console.log('Completed processing ' + data);
+});
+
+Output :
+ 
+
+
+Practical No:-14
+Aim: To apply event-driven programming to a business workflow.
+a) Write a program to place the order for a pizza using Events
+pizza_order.js
+console.log("Name: Shreyash Utekar 126");
+
+const EventEmitter = require('events');
+
+class PizzaOrder extends EventEmitter {}
+
+const pizzaShop = new PizzaOrder();
+
+pizzaShop.on('orderPlaced', (customerName, pizzaType) => {
+  console.log(`Order placed by ${customerName} for a ${pizzaType} pizza.`);
+  setTimeout(() => {
+    pizzaShop.emit('preparing', customerName, pizzaType);
+  }, 2000);
+});
+
+pizzaShop.on('preparing', (customerName, pizzaType) => {
+  console.log(`Preparing the ${pizzaType} pizza for ${customerName}.`);
+  setTimeout(() => {
+    pizzaShop.emit('delivering', customerName, pizzaType);
+  }, 3000);
+});
+
+pizzaShop.on('delivering', (customerName, pizzaType) => {
+  console.log(`Delivering the ${pizzaType} pizza to ${customerName}.`);
+  setTimeout(() => {
+    pizzaShop.emit('delivered', customerName, pizzaType);
+  }, 2000);
+});
+
+pizzaShop.on('delivered', (customerName, pizzaType) => {
+  console.log(`The ${pizzaType} pizza has been delivered to ${customerName}. Enjoy your meal!`);
+});
+
+console.log("Welcome to Pizza Shop!");
+
+setTimeout(() => {
+  pizzaShop.emit('orderPlaced', 'Shreyash Utekar', 'Margherita');
+}, 1000);
+
+Output :
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+ 
+Practical No:-15
+Aim: To apply event-driven programming to financial calculations.
+a)Write a program to calculate the salary using Event
+salary_calculator.js
+console.log("Name: Shreyash Utekar 126");
+
+const EventEmitter = require('events');
+
+class SalaryCalculator extends EventEmitter {}
+
+const salaryEmitter = new SalaryCalculator();
+
+const TAX_RATE = 0.2;
+const BONUS = 5000;
+const DEDUCTIONS = 2000;
+
+salaryEmitter.on('calculate', (baseSalary) => {
+  console.log(`Base Salary: $${baseSalary}`);
+  const tax = baseSalary * TAX_RATE;
+  salaryEmitter.emit('applyTax', baseSalary, tax);
+});
+
+salaryEmitter.on('applyTax', (baseSalary, tax) => {
+  console.log(`Tax Deducted: $${tax}`);
+  const afterTaxSalary = baseSalary - tax;
+  salaryEmitter.emit('applyBonus', afterTaxSalary);
+});
+
+salaryEmitter.on('applyBonus', (afterTaxSalary) => {
+  console.log(`Bonus Added: $${BONUS}`);
+  const afterBonusSalary = afterTaxSalary + BONUS;
+  salaryEmitter.emit('applyDeductions', afterBonusSalary);
+});
+
+salaryEmitter.on('applyDeductions', (afterBonusSalary) => {
+  console.log(`Other Deductions: $${DEDUCTIONS}`);
+  const finalSalary = afterBonusSalary - DEDUCTIONS;
+  salaryEmitter.emit('finalSalary', finalSalary);
+});
+
+salaryEmitter.on('finalSalary', (finalSalary) => {
+  console.log(`Final Salary: $${finalSalary}`);
+});
+
+const baseSalary = 50000;
+console.log("Starting salary calculation...");
+salaryEmitter.emit('calculate', baseSalary);
+
+Output :
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+Practical No:-16
+Aim: To handle complex data arrays and duplicate events.
+a) Write a program to create Event Emitters to print the sum of odd and even numbers from an array
+sum_even_odd.js
+console.log("Name: Shreyash Utekar 126");
+
+const EventEmitter = require('events');
+
+class SumEmitter extends EventEmitter {
+  constructor(arr) {
+    super();
+    this.arr = arr;
+  }
+
+  sumEven() {
+    let evenSum = this.arr
+      .filter(num => num % 2 === 0)
+      .reduce((acc, curr) => acc + curr, 0);
+
+    this.emit('evenSum', evenSum);
+  }
+
+  sumOdd() {
+    let oddSum = this.arr
+      .filter(num => num % 2 !== 0)
+      .reduce((acc, curr) => acc + curr, 0);
+
+    this.emit('oddSum', oddSum);
+  }
+}
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const sumEmitter = new SumEmitter(numbers);
+
+sumEmitter.on('evenSum', (sum) => {
+  console.log(`The sum of even numbers is: ${sum}`);
+});
+
+sumEmitter.on('oddSum', (sum) => {
+  console.log(`The sum of odd numbers is: ${sum}`);
+});
+
+sumEmitter.sumEven();
+sumEmitter.sumOdd();
+
+Output :
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+b) Write a program to demonstrate Events by the same name
+same_event.js
+console.log("Name: Shreyash Utekar 126");
+
+const EventEmitter = require('events');
+const eventEmitter = new EventEmitter();
+
+eventEmitter.on('greet', (name) => {
+  console.log(`Hello, ${name}! Welcome to our Node.js event demo.`);
+});
+
+eventEmitter.on('greet', (name) => {
+  console.log(`${name}, hope you have a fantastic day!`);
+});
+
+eventEmitter.on('greet', (name) => {
+  console.log(`Goodbye, ${name}. See you next time!`);
+});
+
+console.log("Emitting the 'greet' event...");
+eventEmitter.emit('greet', 'Shreyash');
+
+Output :
+ 
+
+
+
+
+
+ 
+Practical No:- 17
+Aim: To study and display local system file paths.
+a) Write an Application to Display Details of the Current File Path
+filepath.js
+console.log("Name: Shreyash Utekar 126");
+
+console.log("Current File Path:", __filename);
+console.log("Current Directory Path:", __dirname);
+
+Output :
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+Practical No:-18
+Aim: To implement basic file I/O operations using the fs module.
+a) Write an Application to Read File
+readFile.js
+
+const fs = require("fs");
+fs.readFile("shreyash.txt",'utf8',function(err,data){
+console.log("Reading File");
+console.log(data);
+});
+
+Output :
+ 
+
+b)Write an Application to Write in File
+writeFile.js
+const fs = require("fs");
+fs.writeFile("shreyash.txt",'Welcome to Sterling',function(err,data){
+    console.log("Writing File");
+    console.log(data);
+});
+
+Output :
+ 
+
+ 
+
+
+
+
+
+Practical No:- 19
+AIM: To perform advanced file system tasks and modern syntax.
+a) Write an Application to Add Data in File
+appendFile.js
+const fs = require("fs");
+fs.appendFile("shreyash.txt",'\n Hello Everyone \n Do like, share & subscribe',function(err,data){
+    console.log("Append File");
+});
+
+Output :
+ 
+
+ 
+
+b) Write an Application to Delete a File
+deleteFile.js
+const fs = require("fs");
+fs.unlink("shreyash.txt",function(err,data){
+    console.log("Deleting File");
+    console.log("File Deleted Succesfully!");
+});
+
+Output :
+ 
+
+
+
+
+
+
+c) File Handling Programs Using Arrow Function
+1) Read File (Arrow Function)
+arrowRead.js
+console.log("Name: Shreyash Utekar 126");
+
+const fs = require('fs');
+
+fs.readFile('data.txt', 'utf8', (err, data) => {
+  if (err) return console.error("Error reading file:", err);
+  console.log("File Content:");
+  console.log(data);
+});
+
+Output :
+ 
+
+2) Write File (Arrow Function)
+arrowWrite.js
+console.log("Name: Shreyash Utekar 126");
+
+const fs = require('fs');
+
+fs.writeFile('data.txt', 'Arrow function write example', err => {
+  if (err) return console.error("Error writing file:", err);
+  console.log("File written using arrow function.");
+});
+
+Output :
+ 
+ 
+3) Append File (Arrow Function)
+arrowAppend.js
+console.log("Name: Shreyash Utekar 126");
+
+const fs = require('fs');
+
+fs.appendFile('data.txt', '\nAppended using arrow function', err => {
+  if (err) return console.error("Error appending file:", err);
+  console.log("File appended using arrow function.");
+});
+
+Output :  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Practical No:-20
+Aim: To create a web server and handle data streams.
+a) To create a simple Node.js HTTP Server
+server.js
+console.log("Name: Shreyash Utekar 126");
+
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+  console.log('Server Running');
+  res.setHeader('Content-Type', 'text/html');
+  res.write('<html>');
+  res.write('<h1>Hello from Node.js server</h1>');
+  res.write('<h1>I am Shreyash Utekar From FYMCA 126</h1>');
+  res.write('<h2>Welcome to this course</h2>');
+  res.write('</html>');
+  res.end();
+});
+
+server.listen(3000, () => {
+  console.log('Server is listening on port 3000');
+});
+
+Output :
+ 
+
+ 
+
+
+
+
+
+b) Demonstrate Piping in Node.js
+1) pipingDemo.js
+console.log("Name: Shreyash Utekar 126");
+
+const fs = require("fs");
+
+const readStream = fs.createReadStream("input.txt");
+const writeStream = fs.createWriteStream("output.txt");
+
+// Pipe read stream into write stream
+readStream.pipe(writeStream);
+
+writeStream.on('finish', () => {
+  console.log("Piping completed successfully");
+});
+
+readStream.on('error', (err) => {
+  console.error("Error reading input file:", err);
+});
+
+writeStream.on('error', (err) => {
+  console.error("Error writing output file:", err);
+});
+
+Output :
+ 
+
+ 
+
+
+
+
+2) pipingDemo2.js
+console.log("Name: Shreyash Utekar Roll No: 126");
+
+const fs = require('fs');
+
+const readableStream = fs.createReadStream('input.txt', 'utf8');
+
+const writableStream = fs.createWriteStream('output.txt');
+
+readableStream.pipe(writableStream);
+
+writableStream.on('finish', () => {
+  console.log('File copy completed!');
+});
+
+readableStream.on('error', (err) => {
+  console.error('Error reading file:', err);
+});
+
+writableStream.on('error', (err) => {
+  console.error('Error writing file:', err);
+});
+
+Output :
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+Practical No:-21
+AIM: To implement server-side routing and business logic.
+a) Write an application to create Home Page, Admin Page, and Student Page using HTTP 
+server
+form.js
+console.log("Name: Shreyash Utekar 126");
+
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+  if (req.url === '/') {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.write(`
+      <html>
+      <head>
+        <style>
+          ul li {
+            display: inline-block;
+            float: right;
+            height: 40px;
+          }
+          ul li a {
+            padding: 20px;
+            background: orange;
+            color: white;
+            text-decoration: none;
+          }
+        </style>
+      </head>
+      <body>
+        <h1>My First Website</h1>
+        <ul>
+          <li><a href="/admin">Contact Admin</a></li>
+          <li><a href="/student">Student</a></li>
+          <li><a href="/home">Home</a></li>
+        </ul>
+        <div style="padding:20px;">
+          <h2>Start Page</h2>
+          <p>This is my first webpage!</p>
+          <p>Hi everyone</p>
+        </div>
+      </body>
+      </html>
+    `);
+    res.end();
+  }
+  else if (req.url === '/home') {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.write(`
+      <html>
+      <body style="background-color: lightyellow; padding: 40px;">
+        <h1>This is Home Page</h1>
+        <h2>Shreyash Utekar</h2>
+        <h3>This page is a brief insight to who I am.</h3>
+        <nav>
+          <a href="/">Start Page</a> |
+          <a href="/student">Student</a> |
+          <a href="/admin">Admin</a>
+        </nav>
+      </body>
+      </html>
+    `);
+    res.end();
+  }
+  else if (req.url === '/student') {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.write(`
+      <html>
+      <body style="background-color:pink;">
+        <h1 align="center">Student Page Form</h1>
+        <form>
+          <fieldset>
+            <legend>Personal Information</legend>
+            Name:<br><input type="text"><br>
+            Email:<br><input type="email"><br>
+            Password:<br><input type="password"><br><br>
+
+            Gender:<br>
+            <input type="radio" name="g"> Male
+            <input type="radio" name="g"> Female<br><br>
+
+            Hobbies:<br>
+            <input type="checkbox"> Sports<br>
+            <input type="checkbox"> Music<br>
+            <input type="checkbox"> Reading<br><br>
+
+            City:<br>
+            <select>
+              <option>Mumbai</option>
+              <option>Pune</option>
+              <option>Ahilyanagar</option>
+            </select><br><br>
+
+            <input type="submit" value="Submit" onclick="alert('Thanks!')">
+          </fieldset>
+        </form>
+      </body>
+      </html>
+    `);
+    res.end();
+  }
+  else if (req.url === '/admin') {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.write(`
+      <html>
+      <body style="background-color:#faf89a;">
+        <h1><u>Admin Login</u></h1>
+        <form>
+          Username:<br><input type="text"><br>
+          Password:<br><input type="password"><br><br>
+          <button onclick="alert('SUCCESS')">LOGIN NOW</button>
+        </form>
+      </body>
+      </html>
+    `);
+    res.end();
+  }
+
+  else {
+    res.writeHead(404, { 'Content-Type': 'text/plain' });
+    res.end("Invalid Request");
+  }
+});
+server.listen(9000, () => {
+  console.log("Node.js web server running at http://localhost:9000");
+});
+Output :
+ 
+ 
+ 	
+b) ERP Program
+
+ 
+ 
+
+erp.js
+console.log("Name: Shreyash Utekar 126");
+
+var http = require('http');
+
+var server = http.createServer(function (req, res) {
+
+    // DASHBOARD
+    if (req.url == '/') {
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.write('<html><head>');
+        res.write('<style>');
+        res.write('body{font-family:Arial;} ul li{display:inline-block; margin:10px;}');
+        res.write('a{padding:15px; background:teal; color:white; text-decoration:none;}');
+        res.write('</style>');
+        res.write('</head><body>');
+        res.write('<h1 align="center">ERP DASHBOARD</h1>');
+        res.write('<h3 align="center">Shreyash Utekar (Roll No: 126)</h3>');
+        res.write('<ul>');
+        res.write('<li><a href="/student">Student Module</a></li>');
+        res.write('<li><a href="/faculty">Faculty Module</a></li>');
+        res.write('<li><a href="/admin">Admin Module</a></li>');
+        res.write('</ul>');
+        res.write('</body></html>');
+        res.end();
+    }
+
+    // STUDENT MODULE
+    else if (req.url == '/student') {
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.write('<html><body bgcolor="lightpink">');
+        res.write('<h1>Student ERP Module</h1>');
+        res.write('<p>Name : Shreyash Utekar</p>');
+        res.write('<p>Roll No : 92</p>');
+        res.write('<p>Course : MCA</p>');
+        res.write('<p>Attendance : 85%</p>');
+        res.write('<a href="/">Back to Dashboard</a>');
+        res.write('</body></html>');
+        res.end();
+    }
+
+    // FACULTY MODULE
+    else if (req.url == '/faculty') {
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.write('<html><body bgcolor="lightyellow">');
+        res.write('<h1>Faculty ERP Module</h1>');
+        res.write('<p>Faculty Name : ____________</p>');
+        res.write('<p>Subject : Web Technology</p>');
+        res.write('<p>Department : MCA</p>');
+        res.write('<p>Lecture Hours : 4 hrs/day</p>');
+        res.write('<a href="/">Back to Dashboard</a>');
+        res.write('</body></html>');
+        res.end();
+    }
+
+    // ADMIN MODULE
+    else if (req.url == '/admin') {
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.write('<html><body bgcolor="lightblue">');
+        res.write('<h1>Admin ERP Module</h1>');
+        res.write('<form>');
+        res.write('Username:<br><input type="text"><br>');
+        res.write('Password:<br><input type="password"><br><br>');
+        res.write('<button onclick="alert(\'Login Successful\')">LOGIN</button>');
+        res.write('</form>');
+        res.write('<br><a href="/">Back to Dashboard</a>');
+        res.write('</body></html>');
+        res.end();
+    }
+
+    else {
+        res.end('Invalid Request');
+    }
+});
+
+server.listen(8000);
+console.log('ERP Server running on port 8000');
+
+Output :
+ 
+
+ 
+
+ 
+
+  
+
+
+
+
+ 
+Practical No:-22
+Aim: To introduce ReactJS basics and component structure.
+Implement Functional Component (React Programs):
+a) Hello World using ReactJS
+1) Write a program to display Hello World using ReactJS
+Heading.jsx
+import logo from './logo.svg';
+import './App.css';
+function Heading() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <h1>Hello, World!</h1>
+        <h2>Name: Shreyash Utekar</h2>
+        <h3>Roll No: 126</h3>
+      </header>
+    </div>
+  );
+}
+export default Heading;
+
+Output:-
+ 
+b) Implementing JSX in actions
+1) Passing Childern in JSX
+App.js
+import React from "react";
+const Welcome = (props) => {
+  return <div>{props.children}</div>;
+};
+const App = () => {
+  return (
+    <Welcome>
+      <h1>Hello, Hackers!!</h1>
+      <p>Welcome to my world.</p>
+    </Welcome>
+  );
+};
+export default App;
+
+Output:
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+2) Using Attributes in JSX
+App.js
+import React from "react";
+function App() {
+  const name = "Shreyash Utekar";
+
+  const greeting = <h1>Hello, {name}!</h1>;
+  const element = (
+    <img
+      src="/image.jpg"
+      alt="CJ Always Rock"
+      style={{
+        width: "300px",
+        height: "auto",
+        borderRadius: "8px",
+      }}
+    />
+  );
+  return (
+    <div>
+      {greeting}
+      {element}
+    </div>
+  );
+}
+export default App;
+
+Output :
+ 
+
+
+
+
+3) Embedding Expressions
+import React from "react";
+function App() {
+  const name = "Shreyash";
+  const greeting = <h1>Hello, {name}!</h1>;
+  return (
+    <div>
+      {greeting}
+    </div>
+  );
+}
+export default App;
+
+Output :
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+c) Create an application in ReactJS to Import and Export Files (Components)
+App.js
+import React from "react";
+import FileUploader from "./components/fileUploader";
+import FileDownloader from "./components/fileDownloader";
+import "./App.css";
+function App() {
+  return (
+    <div className="App">
+      <h2>ReactJS File Import & Export</h2>
+      <h3>Name: Shreyash Utekar</h3>
+      <h4>Roll No: 126</h4>
+
+      <FileUploader />
+      <hr />
+      <FileDownloader />
+    </div>
+  );
+}
+export default App;
+
+fileUploader.js
+import React, { useState } from "react";
+const FileUploader = () => {
+  const [fileContent, setFileContent] = useState("");
+
+  const handleFileUpload = (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = (event) => {
+      setFileContent(event.target.result);
+    };
+
+    if (file) {
+      reader.readAsText(file);
+    }
+  };
+  return (
+    <div>
+      <h3>Upload a File</h3>
+      <input type="file" onChange={handleFileUpload} />
+
+      {fileContent && (
+        <div>
+          <h4>File Content:</h4>
+          <textarea
+            value={fileContent}
+            readOnly
+            rows="10"
+            cols="50"
+          />
+        </div>
+      )}
+    </div>
+  );
+};
+export default FileUploader;
+
+fileDownloader.js
+import React from "react";
+const FileDownloader = () => {
+  const handleDownload = () => {
+    const content = "This is some sample text for the file.\nName: Shreyash Utekar\nRoll No: 126";
+    const blob = new Blob([content], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "sample.txt";
+    link.click();
+
+    URL.revokeObjectURL(url);
+  };
+  return (
+    <div>
+      <h3>Download a File</h3>
+      <button onClick={handleDownload}>Download</button>
+    </div>
+  );
+};
+export default FileDownloader;
+
+Output :
+
+ 	
+
+d) Implement React Routing
+App.js
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./components/Home";
+import About from "./components/About";
+import Contact from "./components/Contact";
+const App = () => {
+  return (
+    <Router>
+      <nav>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+        </ul>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
+  );
+};
+export default App;
+
+components/Home.js
+import React from "react";
+const Home = () => {
+  return <h1>Welcome to the Home Page – Shreyash Utekar</h1>;
+};
+export default Home;
+components/About.js
+import React from "react";
+const About = () => {
+  return <h1>About Us - Shreyash Utekar </h1>;
+};
+export default About;
+
+components/Contact.js
+import React from "react";
+const Contact = () => {
+  return <h1>Contact Us - Shreyash Utekar </h1>;
+};
+export default Contact;
+
+Output :
+
+   
+ 
+
+ 
+Practical No:- 23
+Aim: To study React component lifecycles and state management.
+a) Create an application in ReactJS to implement Component Life Cycle.
+App.js
+import React, { useState, useEffect } from "react";
+import "./App.css";
+
+const LifecycleComponent = () => {
+  const [count, setCount] = useState(0);
+  const [message, setMessage] = useState("Hello, World!");
+
+  useEffect(() => {
+    console.log("Component mounted!");
+
+    return () => {
+      console.log("Component will unmount!");
+    };
+  }, []);
+
+  useEffect(() => {
+    console.log(`Count updated to: ${count}`);
+  }, [count]);
+
+  const handleClick = () => {
+    setCount(count + 1);
+  };
+
+  const handleMessageChange = () => {
+    setMessage("Message has been changed!");
+  };
+
+  return (
+    <div>
+      <h1>React Component Lifecycle Example</h1>
+      <h3>Name: Shreyash Utekar</h3>
+      <h4>Roll No: 126</h4>
+
+      <p>Message: {message}</p>
+      <p>Count: {count}</p>
+
+      <button onClick={handleClick}>Increment Count</button>
+      <br /><br />
+      <button onClick={handleMessageChange}>Change Message</button>
+    </div>
+  );
+};
+
+function App() {
+  return (
+    <div className="App">
+      <h2>React Component Lifecycle Demo</h2>
+      <LifecycleComponent />
+    </div>
+  );
+}
+export default App;
+
+App.css (Optional)
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+button {
+  padding: 8px 15px;
+  margin: 5px;
+}
+
+Output :
+ 
+ 
+
+
+b) Increment/Decrement counter using state.
+App.js
+import React from "react";
+import Counter from "./counter";
+
+function App() {
+  return (
+    <div>
+      <Counter />
+    </div>
+  );
+}
+export default App;
+
+counter.js
+import React, { useState } from "react";
+
+const Counter = () => {
+  const [count, setCount] = useState(0);
+
+  const increment = () => setCount(count + 1);
+  const decrement = () => setCount(count - 1);
+
+  return (
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h1>Increment / Decrement Counter</h1>
+      <h2>{count}</h2>
+
+      <button onClick={increment} style={{ marginRight: "10px" }}>
+        Increment
+      </button>
+
+      <button onClick={decrement}>Decrement</button>
+
+      <p>Shreyash Utekar</p>
+    </div>
+  );
+};
+export default Counter;
+
+Output :
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+c) Implement Form Validation
+App.js
+import React from "react";
+import BasicFormValidation from "./BasicFormValidation";
+
+function App() {
+  return (
+    <div style={{ textAlign: "center", marginTop: "40px" }}>
+      <h2>Form Validation</h2>
+      <BasicFormValidation />
+      <p>Shreyash Milind Utekar</p>
+    </div>
+  );
+}
+export default App;
+src/BasicFormValidation.js
+import React, { useState } from "react";
+
+function BasicFormValidation() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: ""
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
+  const validate = () => {
+    const newErrors = {};
+
+    if (!formData.name) {
+      newErrors.name = "Name is required";
+    }
+    if (!formData.email) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Email is invalid";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      alert("Form submitted successfully!");
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label>Name:</label><br />
+        <input
+          type="text"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+        />
+        {errors.name && (
+          <p style={{ color: "red" }}>{errors.name}</p>
+        )}
+      </div>
+
+      <div>
+        <label>Email:</label><br />
+        <input
+          type="text"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+        />
+        {errors.email && (
+          <p style={{ color: "red" }}>{errors.email}</p>
+        )}
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+export default BasicFormValidation;
+
+Output :
+
+   
+
+
+    
+
+Practical No:-24
+Aim: To handle user interaction via DOM events and Props.
+a) Create an application to Display Your Name Using Prop
+App.js
+import React from "react";
+import NameDisplay from "./NameDisplay";
+function App() {
+  return (
+    <div>
+      <NameDisplay name="Shreyash Utekar" roll="126" />
+    </div>
+  );
+}
+export default App;
+
+NameDisplay.js
+import React from "react";
+const NameDisplay = (props) => {
+  return (
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h1>Hello, {props.name}!</h1>
+      <h2>Roll No: {props.roll}</h2>
+    </div>
+  );
+};
+export default NameDisplay;
+Output :
+ 
+ 
+b) Write a Program that Tracks the Changes in an Input Field and Displays the Entered Text in Real-Time Using onChange DOM Event
+App.js
+import { useState } from "react";
+function App() {
+  const [text, setText] = useState("");
+  const handleChange = (event) => {
+    setText(event.target.value);
+  };
+  return (
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h2>Real-time Input Tracking</h2>
+      <input
+        type="text"
+        placeholder="Type something..."
+        onChange={handleChange}
+        style={{ padding: "10px", fontSize: "16px", width: "300px" }}
+      />
+      <p>You typed: {text}</p>
+    </div>
+  );
+}
+export default App;
+
+Output :
+ 
+
+	
+c) Write a Program to Count Words as They Are Typed Using onKeyUp Event
+App.js
+import React, { useState } from "react";
+
+function App() {
+  const [keyPressed, setKeyPressed] = useState("");
+
+  const handleKeyUp = (event) => {
+    setKeyPressed(event.key);
+  };
+  return (
+    <div style={{ padding: "20px", textAlign: "center" }}>
+      <h1>React onKeyUp Event Demo</h1>
+      <p>Type something in the input box below and release a key to see the last key pressed.</p>
+      <div style={{ marginBottom: "20px" }}>
+        <input
+          type="text"
+          onKeyUp={handleKeyUp}
+          placeholder="Type something and release a key"
+          style={{
+            padding: "10px",
+            width: "300px",
+            border: "1px solid #ccc",
+            borderRadius: "5px",
+            fontSize: "16px",
+          }}
+        />
+      </div>
+      <p style={{ fontSize: "20px", color: "#333" }}>
+        <strong>Last key pressed: </strong>
+        {keyPressed}
+      </p>
+    </div>
+  );
+}
+
+export default App;
+Output :
+ 
+Practical No:-25
+Aim: To perform database operations and create functional React apps.
+a) Create an application to implement To-Do Task
+App.js
+import React from "react";
+import ToDo from "./ToDo";
+
+function App() {
+  return (
+    <div>
+      <ToDo />
+    </div>
+  );
+}
+export default App;
+
+ToDo.js
+import React, { useState } from "react";
+
+const ToDo = () => {
+  const [tasks, setTasks] = useState([]);
+  const [task, setTask] = useState("");
+
+  const addTask = () => {
+    if (task.trim()) {
+      setTasks([...tasks, task]);
+      setTask("");
+    }
+  };
+
+  const removeTask = (index) => {
+    const updatedTasks = tasks.filter((_, i) => i !== index);
+    setTasks(updatedTasks);
+  };
+
+  return (
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h1>To-Do List</h1>
+      <div>
+        <input
+          type="text"
+          value={task}
+          onChange={(e) => setTask(e.target.value)}
+          placeholder="Enter a task"
+          style={{ padding: "8px", width: "200px" }}
+        />
+        <button
+          onClick={addTask}
+          style={{ padding: "8px 16px", marginLeft: "10px" }}
+        >
+          Add Task
+        </button>
+      </div>
+      <ul style={{ listStyle: "none", padding: "0", marginTop: "20px" }}>
+        {tasks.map((t, index) => (
+          <li
+            key={index}
+            style={{
+              margin: "10px 0",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <span style={{ marginRight: "20px" }}>{t}</span>
+            <button
+              onClick={() => removeTask(index)}
+              style={{
+                backgroundColor: "red",
+                color: "white",
+                border: "none",
+                padding: "5px 10px",
+                cursor: "pointer",
+              }}
+            >
+              Remove
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+export default ToDo;
+
+Output :
+ 
+b) Database CRUD (Create Database, Table, Insert, Update, Delete, Add Column)
+1) createDB.js
+const mysql = require("mysql2");
+
+const con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "shreyash"
+});
+
+con.connect((err) => {
+  if (err) throw err;
+  console.log("Connected to MySQL");
+
+  con.query("CREATE DATABASE IF NOT EXISTS students4", (err) => {
+    if (err) throw err;
+    console.log("Database created");
+
+    con.changeUser({ database: "students4" }, (err) => {
+      if (err) throw err;
+
+      const sql = `
+        CREATE TABLE IF NOT EXISTS student1 (
+          id INT AUTO_INCREMENT PRIMARY KEY,
+          name VARCHAR(255),
+          address VARCHAR(255),
+          course VARCHAR(50),
+          contact VARCHAR(15)
+        )
+      `;
+
+      con.query(sql, (err) => {
+        if (err) throw err;
+        console.log("Student table created");
+        con.end();
+      });
+    });
+  });
+});
+
+Output :
+ 
+
+ 
+
+2)Create an application to insert rows into Student table in NodeJS
+insertrows.js
+const mysql = require('mysql2');
+const con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "shreyash", // your password
+  database: "students4",
+  port: 3306
+});
+con.connect((err) => {
+  if (err) throw err;
+  console.log("Connected to Database");
+
+  const sql = "INSERT INTO student1 (name, address, course, contact) VALUES (?, ?, ?, ?)";
+  
+  const values = ["Shreyash Milind Utekar", "Thane", "MCA", "126"]; 
+
+  con.query(sql, values, (err, result) => {
+    if (err) throw err;
+    console.log("Row inserted successfully!");
+    con.end();
+  });
+});
+
+Output :
+
+ 
+
+ 
+
+
+ 
+3) Create an application to update a row in Student table in NodeJS
+update.js
+const mysql = require('mysql2');
+const con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "shreyash", // your password
+  database: "students4",
+  port: 3306
+});
+con.connect((err) => {
+  if (err) throw err;
+  console.log("Connected to Database");
+
+  const sql = "UPDATE student1 SET course = ? WHERE id = ?";
+  const values = ["Web Technology", 1]; // you can change id or course name here
+
+  con.query(sql, values, (err, result) => {
+    if (err) throw err;
+    if (result.affectedRows > 0) {
+      console.log("Record updated successfully");
+    } else {
+      console.log("No record found with the given ID");
+    }
+    con.end();
+  });
+});
+
+Output :
+ 
+ 
+
+
+
+ 
+4) Create an application to delete rows in Student table in NodeJS
+delete.js
+const mysql = require("mysql2");
+const con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "shreyash", // your password
+  database: "students4",
+  port: 3306
+});
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected to Database");
+
+  const sql = "DELETE FROM student1 WHERE id = ?";
+  const values = [2]; // you can change id as needed
+
+  con.query(sql, values, function(err, result) {
+    if (err) throw err;
+
+    if (result.affectedRows > 0) {
+      console.log("Record deleted successfully");
+    } else {
+      console.log("No record found with the given ID");
+    }
+    con.end();
+  });
+});
+
+Output :
+ 
+ 
+5) Create an application to add a column in Student table in NodeJS
+addColumn.js
+const mysql = require("mysql2");
+
+const con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "shreyash", // your password
+  database: "students4",
+  port: 3306
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected to Database");
+
+  con.query(sql, function(err, result) {
+    if (err) throw err;
+    console.log("Column 'email' added successfully");
+
+    con.end();
+  });
+});
+
+Output :
+ 
+
+ 
+
+c) Implement React Hooks programs
+Program 1: useState - Counter (array style)
+App.js
+import React, { useState } from "react";
+const App = () => {
+  const array = useState(0);
+  const counter = array[0];
+  const setCounter = array[1];
+
+  function increaseCounter() {
+    setCounter(counter + 1);
+  }
+  return (
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h3>Name: Shreyash Utekar</h3>
+      <h1>Counter: {counter}</h1>
+      <button onClick={increaseCounter}>Increase</button>
+    </div>
+  );
+};
+export default App;
+
+Output :
+ 
+
+
+
+
+
+
+
+
+
+
+Program 2: useState - Counter (destructuring)
+App.js
+import React, { useState } from "react";
+const App = () => {
+  const [counter, setCounter] = useState(0);
+
+  function increaseCounter() {
+    setCounter(counter + 1);
+  }
+
+  return (
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h3>Name: Shreyash Utekar | Roll No: 126</h3>
+      <h1>Counter: {counter}</h1>
+      <button onClick={increaseCounter}>Increase</button>
+    </div>
+  );
+};
+export default App;
+
+Output :
+ 
+
+
+
+
+
+
+
+
+
+
+Program 3: useState – Name + Counter
+App.js
+import React, { useState } from "react";
+
+const App = () => {
+  const [counter, setCounter] = useState(0);
+  const [name, setName] = useState("");
+
+  function increaseCounter() {
+    setCounter(counter + 1);
+  }
+
+  return (
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h3>Enter your name:</h3>
+      <input
+        type="text"
+        placeholder="Type your name here"
+        onChange={(e) => setName(e.target.value)}
+        style={{ padding: "5px", fontSize: "16px" }}
+      />
+      <h1>
+        {name || "Your Name"} has clicked {counter} times!!
+      </h1>
+      <button onClick={increaseCounter} style={{ padding: "10px 20px", fontSize: "16px" }}>
+        Increase
+      </button>
+    </div>
+  );
+};
+
+export default App;
+
+Output :
+
+ 
+
+
+
+Program 4: useEffect – Document Title (runs every render)
+App.js
+import React, { useState, useEffect } from "react";
+
+const App = () => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    document.title = `${count} new messages`;
+  });
+
+  return (
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h3>Heyiii This is Shreyash, {count} new Messages!</h3>
+      <button
+        onClick={() => setCount(count + 1)}
+        style={{ padding: "10px 20px", fontSize: "16px", marginTop: "10px" }}
+      >
+        Increase
+      </button>
+    </div>
+  );
+};
+
+export default App;
+
+Output :
+ 
+
+
+
+
+
+
+
+
+
+
+
+	
+Program 5: useEffect – Document Title (dependency array)
+App.js
+import React, { useState, useEffect } from "react";
+
+const App = () => {
+  const [count, setCount] = useState(0);
+
+  // useEffect with empty dependency array runs only once after first render
+  useEffect(() => {
+    document.title = `${count} new messages`;
+  }, []); // Runs only once
+
+  return (
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h3>{count} new Messages from Shreyash!</h3>
+      <button
+        onClick={() => setCount(count + 1)}
+        style={{ padding: "10px 20px", fontSize: "16px", marginTop: "10px" }}
+      >
+        Increase
+      </button>
+    </div>
+  );
+};
+export default App;
+
+Output :
+ 
+
+
+
+
+
+
+
+Program 6: useEffect – Timer with Cleanup
+App.js
+import React, { useState, useEffect } from "react";
+
+const App = () => {
+  const [time, setTime] = useState(0);
+
+  useEffect(() => {
+    // Use functional update to avoid stale closure
+    const timer = setInterval(() => {
+      setTime(prevTime => prevTime + 1);
+    }, 1000);
+
+    // Cleanup function to clear interval on unmount
+    return () => {
+      clearInterval(timer);
+    };
+  }, []); // Empty dependency array ensures timer is set once
+
+  return (
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h1>Shreyash 126</h1>
+      <h3>{time} seconds elapsed</h3>
+    </div>
+  );
+};
+export default App;
+
+Output :
+ 
+
+
+
+
+Program 7: Implement useContext Hook
+App.js
+import React, { createContext } from "react";
+import MainComponent from "./components/MainComponent";
+
+export const LoginContext = createContext();
+
+const App = () => {
+  return (
+    <LoginContext.Provider value={true}>
+      <div>
+        <h2>useContext Demo</h2>
+        <MainComponent />
+      </div>
+    </LoginContext.Provider>
+  );
+};
+export default App;
+
+components/MainComponent.js
+import React from "react";
+import SinglePost from "./SinglePost";
+
+const MainComponent = () => {
+  return <SinglePost />;
+};
+export default MainComponent;
+
+components/SinglePost.js
+import React, { useContext } from "react";
+import { LoginContext } from "../App";
+
+const SinglePost = () => {
+  const login = useContext(LoginContext);
+
+  return (
+    <div>
+      <h3>Single Post</h3>
+      <p>Login Status: {login ? "Logged In" : "Logged Out"}</p>
+      <p>Name: Shreyash Utekar (Roll No: 126)</p>
+    </div>
+  );
+};
+export default SinglePost;
+
+Output :
+ 
